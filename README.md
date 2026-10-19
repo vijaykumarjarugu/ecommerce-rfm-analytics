@@ -2,8 +2,10 @@
 
 An end-to-end data analytics project leveraging Brazilian E-Commerce data (Olist) to analyze transactional patterns, build RFM (Recency, Frequency, Monetary) behavioral clusters, and deliver an executive Power BI dashboard.
 
-![Dashboard Preview](dashboard/dashboard_preview.png)
+## 🎥 Interactive Dashboard Demo
+[![Watch Dashboard Walkthrough](dashboard/dashboard_preview.png)](https://drive.google.com/file/d/18c4WX6jgml9_3PxtztSfaxDusMSE0kUq/view?usp=sharing)
 
+> 👆 **Click the image above to watch the full interactive dashboard walkthrough on Google Drive.**
 ## 📌 Executive Summary
 - **Total Revenue:** $15.42M across ~96K total delivered orders.
 - **Average Order Value (AOV):** $159.85.
