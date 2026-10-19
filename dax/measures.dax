@@ -1,0 +1,28 @@
+// ==========================================
+// E-COMMERCE CORE KPI MEASURES
+// ==========================================
+
+// 1. Total Revenue
+Total Revenue = 
+SUM(public_olist_order_payments[payment_value])
+
+// 2. Total Orders
+Total Orders = 
+DISTINCTCOUNT(public_olist_orders[order_id])
+
+// 3. Average Order Value (AOV)
+Average Order Value = 
+DIVIDE([Total Revenue], [Total Orders], 0)
+
+// 4. Repeat Customer Rate %
+Repeat Customer Rate % = 
+VAR TotalCust = DISTINCTCOUNT(public_olist_customers[customer_unique_id])
+VAR RepeatCust = 
+    COUNTROWS(
+        FILTER(
+            VALUES(public_olist_customers[customer_unique_id]),
+            CALCULATE(DISTINCTCOUNT(public_olist_orders[order_id])) > 1
+        )
+    )
+RETURN
+    DIVIDE(RepeatCust, TotalCust, 0)
